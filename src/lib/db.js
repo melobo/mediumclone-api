@@ -2,10 +2,10 @@
 const mongoose = require('mongoose')
 
 const {
-  DB_PASSWORD,
-  DB_USER,
-  DB_NAME,
-  DB_HOST
+  DB_USER = 'melobo',
+  DB_NAME = 'kodeblog',
+  DB_PASSWORD = 'Villegas17',
+  DB_HOST = 'sexta-gen-vqx48.mongodb.net'
 } = process.env
 
 const url = `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority`

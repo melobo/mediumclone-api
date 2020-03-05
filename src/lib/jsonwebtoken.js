@@ -1,16 +1,16 @@
 const jwt = require('jsonwebtoken')
-const {JWT_SECRET}= process.env
+const { JWT_SECRET } = process.env
 
-function sign(payload = {}){
-  return  jwt.sign(payload,JWT_SECRET,{expiresIn :'1d'})
+function sign(payload = {}) {
+  return jwt.sign(payload, 'supersecretword', { expiresIn: '1d' })
 }
 
-function verify(token){
-  return jwt.verify(token,JWT_SECRET)
+function verify(token) {
+  return jwt.verify(token, 'supersecretword')
 
 }
 
-module.exports ={
+module.exports = {
   sign,
   verify
 }
